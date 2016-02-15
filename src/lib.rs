@@ -6,7 +6,10 @@ use std::default::*;
 use std::ops::*;
 
 mod abs;
+mod trigm;
+
 pub use abs::*;
+pub use trigm::*;
 
 pub trait Scalar:
     Copy + PartialEq + PartialOrd
@@ -19,6 +22,7 @@ pub trait Scalar:
     +Rem<Self,Output=Self> + RemAssign<Self>
     +Neg<Output=Self>
     +Abs
+    +Trigonometry
     {}
 
 impl<S> Scalar for S
@@ -33,5 +37,6 @@ impl<S> Scalar for S
     +Rem<S,Output=S> + RemAssign<S>
     +Neg<Output=S>
     +Abs
+    +Trigonometry
     {}
 
