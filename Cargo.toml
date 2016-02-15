@@ -1,6 +1,6 @@
 [package]
 name = "scalar"
-version = "0.1.0"
+version = "0.1.2"
 authors = ["GHIAT Houssem <ghiat.houssem@live.com>"]
 
 description = "A trait for scalars (integers and floats)"

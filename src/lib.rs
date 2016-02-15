@@ -5,7 +5,7 @@ use std::num::*;
 use std::default::*;
 use std::ops::*;
 
-pub trait Scalare:
+pub trait Scalar:
     Copy + PartialEq + PartialOrd
     +One + Zero
     +Default
@@ -18,7 +18,7 @@ pub trait Scalare:
     +Abs
     {}
 
-impl<S> Scalare for S
+impl<S> Scalar for S
     where S:
     Copy + PartialEq + PartialOrd
     +One + Zero
