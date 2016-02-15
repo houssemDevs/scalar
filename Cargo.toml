@@ -1,6 +1,13 @@
 [package]
-name = "scalare"
+name = "scalar"
 version = "0.1.0"
 authors = ["GHIAT Houssem <ghiat.houssem@live.com>"]
+
+description = "A trait for scalars (integers and floats)"
+repository = "https://github.com/houssemDevs/scalare"
+readme = "README.md"
+keywords = ["scalar", "trait", "algebra", "geometry"]
+license = "MIT"
+
 
 [dependencies]
