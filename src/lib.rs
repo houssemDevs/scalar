@@ -7,9 +7,11 @@ use std::ops::*;
 
 mod abs;
 mod trigm;
+mod math_func;
 
 pub use abs::*;
 pub use trigm::*;
+pub use math_func::*;
 
 pub trait Scalar:
     Copy + PartialEq + PartialOrd
@@ -19,10 +21,11 @@ pub trait Scalar:
     +Sub<Self, Output=Self> + SubAssign<Self>
     +Mul<Self, Output=Self> + MulAssign<Self>
     +Div<Self, Output=Self> + DivAssign<Self>
-    +Rem<Self,Output=Self> + RemAssign<Self>
+    +Rem<Self, Output=Self> + RemAssign<Self>
     +Neg<Output=Self>
     +Abs
     +Trigonometry
+    +MathFunc
     {}
 
 impl<S> Scalar for S
@@ -34,9 +37,10 @@ impl<S> Scalar for S
     +Sub<S, Output=S> + SubAssign<S>
     +Mul<S, Output=S> + MulAssign<S>
     +Div<S, Output=S> + DivAssign<S>
-    +Rem<S,Output=S> + RemAssign<S>
+    +Rem<S, Output=S> + RemAssign<S>
     +Neg<Output=S>
     +Abs
     +Trigonometry
+    +MathFunc
     {}
 
