@@ -1,6 +1,6 @@
 [package]
 name = "scalar"
-version = "0.1.3"
+version = "0.1.6"
 authors = ["GHIAT Houssem <ghiat.houssem@live.com>"]
 
 description = "A trait for scalars (integers and floats)"
@@ -9,5 +9,9 @@ readme = "README.md"
 keywords = ["scalar", "trait", "algebra", "geometry"]
 license = "MIT"
 
+include = [
+  "src/*.rs",
+  "Cargo.toml"
+]
 
 [dependencies]
