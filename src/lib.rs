@@ -4,14 +4,18 @@ use std::default::*;
 use std::ops::*;
 
 mod abs;
+mod ident;
 
 pub use abs::*;
+pub use ident::*;
 
 pub trait Scalar:
     Copy
     + PartialEq
     + PartialOrd
     + Default
+    + Zero
+    + One
     + Add<Self, Output = Self>
     + AddAssign<Self>
     + Sub<Self, Output = Self>
@@ -33,6 +37,8 @@ where
         + PartialEq
         + PartialOrd
         + Default
+        + Zero
+        + One
         + Add<S, Output = S>
         + AddAssign<S>
         + Sub<S, Output = S>
