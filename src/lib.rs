@@ -1,6 +1,7 @@
 #![feature(op_assign_traits)]
 
 use std::default::*;
+use std::marker::Send;
 use std::ops::*;
 
 mod abs;
@@ -11,6 +12,7 @@ pub use ident::*;
 
 pub trait Scalar:
     Copy
+    + Send
     + PartialEq
     + PartialOrd
     + Default
@@ -34,6 +36,7 @@ pub trait Scalar:
 impl<S> Scalar for S
 where
     S: Copy
+        + Send
         + PartialEq
         + PartialOrd
         + Default
